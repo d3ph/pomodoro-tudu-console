@@ -1,0 +1,36 @@
+VPATH=@VPATH@
+PKGNAME=@PKGNAME@
+VERSION=@VERSION@
+INSTALL_PROGRAM=@INSTALL_PROGRAM@
+.PHONY: all install uninstall clean mrproper
+CXX=@CXX@
+CXXFLAGS=@CXXFLAGS@
+LDFLAGS=@LDFLAGS@
+SRCS=@SRCS@
+
+prefix=@PREFIX@
+BINDIR?=@BINDIR@
+
+
+OBJS=$(SRCS:.cc=.o)
+
+all: $(PKGNAME)
+
+$(PKGNAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $(OBJS) $(LDFLAGS)
+
+.cc.o:
+	$(CXX) $(CXXFLAGS) -c $<
+
+install: all
+	mkdir -p $(DESTDIR)$(BINDIR)
+	$(INSTALL_PROGRAM) $(PKGNAME) $(DESTDIR)$(BINDIR)
+
+clean:
+	@rm -f $(PKGNAME) $(OBJS) core tags
+
+mrproper: clean
+	rm Makefile defs.h
+
+uninstall:
+	rm $(DESTDIR)$(BINDIR)/$(PKGNAME)

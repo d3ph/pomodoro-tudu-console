@@ -1,0 +1,114 @@
+0.8.1
+	* Added arrow keys on date editor
+	* Added support for non-latin keybinding pairs
+	* Fixed wrong plotting while change tudu task position
+	* Fixed category problems (autofill, showonly, ...)
+	* Fixed Makefile problems reported on debian bug #611077
+	* Removed freeze on moving task
+
+0.8
+	* Added ./configure script compatible with autotools
+	* Added multiple category support
+	* Added support for non-fix length categories
+	* Added warning color to old scheduled tasks in sched
+	* Added AvPag and RvPag to normal interface
+	* Fixed display when the length of the title equal to the screen
+	* Fixed problems with updating sched when the title changes
+
+0.7
+	* Added support to multi linear task titles
+	* New pipe windows as separators
+	* Configurable date format as US or european
+	* Configurable tasks with child displayed bold
+	* Warn when disk is full
+	* Fixed install path problems if the DESTDIR didn't end with '/'
+	* Fixed year xml storage with different locales (debian bug #568064)
+	* Fixed problems with external editors and UTF-8
+	* Fixed collision with some polish characters and control keys
+	* Fixed dead loop when .tudu.xml is empty
+
+0.6.1
+	* Added confirm question on Q
+	* Configurable beggining to end move
+	* Fixed remaping keys on config file
+	* Show remaped keys on help bar (Patch from Enrique Matias)
+	* Fixed leap year calculus (Patch from Enrique Matias)
+	* Make inline help and man more redeable (Patch from Enrique Matias)
+	* Deactivate Ctrl-c (Patch from Thorbjörn Jemander)
+
+0.6
+	* Added suppor for international characters
+	* Added help command to display man page
+	* Added hide_percent option in the config file
+	* Added patch from Magnus Müller: scroll to beginning end if end beginning reached
+	* Fixed problems with O and P
+	* Fixed problems at repaint after resize
+
+0.5.1
+	* Added a simple theme to show when theme don't fit
+	* Added support for up/re page keys on text editor
+	* Fixed tab problems on editors
+	* Fixed problems with text cursor when resize window
+	* Fixed problems with non writable files
+	* Fixed default permisions on lock files
+	* Fixed segfaults when wrong params in cli
+
+0.5
+	* Added search on titles
+	* Added command interface
+	* Added commands for hide categories
+	* Added autocompletion on category editor
+	* Added home and end keys on the editor
+	* Added lock files for avoid concurrent tudus
+	* Added documentation about all the features in the man page
+	* Editing the title if is empty left arrow destroy the task
+	* Fixed reorder tasks
+	* Fixed english messages (thanks to Michael Leslie)
+
+0.4.1
+	* Added reorder tasks on the scheluder
+	* Fixed paste as child when task is collapsed
+	* Fixed refresh when sched is deleted
+
+0.4
+	* Added scheluder for tasks
+	* Added hide done tasks
+	* Added simple visual tree
+	* Added paste as child
+	* Sort by done uses 100% as done
+	* Fixed help dirty close
+	* Added sort after edit priority, category, ...
+
+0.3.2
+	* Fixed a segfault in i386 editing priorities
+	* Added support for delete priority
+
+0.3.1
+	* Changed tudurc from /usr/local/share/tudu to /usr/local/etc
+
+0.3
+	* Added @include to config files
+	* Added theme support in config files
+	* Addeѕ support for resizing term
+	* Added sort by percent done
+	* Added scroll in help screen
+	* Fixed sort errors
+	* Fixed problems with temporal files
+	* Fixed problems with empty tudus
+
+0.2.1
+	* Fixed bug: saving files in amd64
+	* Fixed bug: inheritance deadlines
+	* Fixed bug: normal text editor
+	* Fixed bug: category editor
+
+0.2
+	* Added deadline date.
+	* Added categories.
+	* Added priorities.
+	* Added support for sort the ToDos from different sort methods.
+	* Allowed to edit the text of the ToDos with an external editor.
+	* Fixed some segfaults and bugs.
+
+0.1
+	* First version.
